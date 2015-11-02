@@ -1,22 +1,27 @@
 # Site settings
-description: A blog about lorem ipsum dolor sit amet
+description: A blog about java develop
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://localhost:4000" # the base hostname & protocol for your site 
+timezone: Asia/Shanghai
 
 # User settings
-username: Charles Fan
-user_description: Charles Fan at Shanghai
+username: Fanxy
+user_description: Fanxy at Shanghai
 user_title: backend Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
+email: Charles.Fan@foxmail.com
+t#witter_username: lorem_ipsum
+github_username:  CharlesFan913
+#gplus_username:  lorem_ipsum
 disqus_username: lorem_ipsum
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
 permalink: /:title/
+
+#karmdown
+karmdown: 
+  input: GFM  #GitHub favored markdown extensions
 
 
 # html minify
