@@ -1,14 +1,14 @@
 # Site settings
-description: A blog about java develop
+description: A blog about java dev
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:4000" # the base hostname & protocol for your site 
+url: "http://blog.fanxy.net" # the base hostname & protocol for your site 
 timezone: Asia/Shanghai
 encoding: utf-8
 
 # User settings
 username: Fanxy
 user_description: Fanxy at Shanghai
-user_title: backend Developer
+user_title: Developer
 email: Charles.Fan@foxmail.com
 t#witter_username: lorem_ipsum
 github_username:  CharlesFan913
