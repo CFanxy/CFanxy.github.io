@@ -1,5 +1,5 @@
 # Site settings
-description: A blog about java dev
+description: A blog about program
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.fanxy.net" # the base hostname & protocol for your site 
 timezone: Asia/Shanghai
@@ -9,11 +9,11 @@ encoding: utf-8
 username: Fanxy
 user_description: Fanxy at Shanghai
 user_title: Developer
-email: Charles.Fan@foxmail.com
+email: LuciferFan913@gmail.com
 t#witter_username: lorem_ipsum
 github_username:  CharlesFan913
 #gplus_username:  lorem_ipsum
-disqus_username: lorem_ipsum
+disqus_username: fanxy
 
 # Build settings
 markdown: kramdown
