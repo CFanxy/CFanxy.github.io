@@ -17,7 +17,6 @@ disqus_username: fanxy
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
 permalink: /:title/
 
 #karmdown
