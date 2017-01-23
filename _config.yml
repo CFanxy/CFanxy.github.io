@@ -1,9 +1,12 @@
 # Site settings
 description: A blog about program
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://blog.fanxy.net" # the base hostname & protocol for your site 
+url: "http://CharlesFan913.github.io" # the base hostname & protocol for your site 
 timezone: Asia/Shanghai
 encoding: utf-8
+# Outputting
+permalink:     date
+paginate_path: /page:num
 
 # User settings
 username: Fanxy
@@ -13,7 +16,7 @@ email: LuciferFan913@gmail.com
 t#witter_username: lorem_ipsum
 github_username:  CharlesFan913
 #gplus_username:  lorem_ipsum
-disqus_username: fanxy
+#disqus_username: fanxy
 
 # Build settings
 markdown: kramdown
@@ -22,6 +25,13 @@ permalink: /:title/
 #karmdown
 karmdown: 
   input: GFM  #GitHub favored markdown extensions
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  hard_wrap:      false
+  footnote_nr:    1
 
 
 # html minify
