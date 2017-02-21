@@ -1,0 +1,32 @@
+---
+layout: post
+title: "MAC加密标准ANSI X9.9和ANSI X9.19的步骤与区别"
+date: 2017-02-20 21:00:00
+description: 'ANSI X9.9和ANSI X9.19详细介绍'
+tags:
+- java
+- encryption
+categories:
+- java
+twitter_text: "difference between ANSI X9.9 and ANSI X9.19"
+---
+
+金融机构信息传输接口最后需要加上MAC(Message Authentication Code)信息，MAC信息由报文信息中部分内容经过规定步骤加密生成。ANSI X9.9 MAC、ANSI X9.19 Optional Procedure 1 MAC、EMV MAC、ISO 16609 TDES MAC是四种基于DES的生成标准。Keyed-hash MAC 是一种散列消息生成标准。其中ANSI X9.9、ANSI X9.19和银联ECB模式比较常见。
+
+#### ANSI X9.9 MAC
+ANSI X9.9的加密步骤是实际上就是DES中CBC模式的方式，只是标准的CBC模式最后把每次处理的8字节最后拼接在一起输出为最后的结果，而X9.9标准只取最后处理的8个字节最后结果，所以想要得到X9.9标准的MAC只需要将MAC block进行0的8字节补齐，然后进行DES的CBC模式加密，最后我们取最后结果的8字节数据好了。
+
+![图一]({{ site.url }}/assets/img/ANSI-X9.9.jpg)
+
+#### ANSI X9.19 Optional Procedure 1 MAC
+ANSI X9.19的密钥必须是双倍长度(16字节长度)了，会将mac key按8字节分成左半部，右半部。异或之后每次都用左半部对异或结果进行des加密运算，运算后的结果与下一组再进行异或。最后的结果用右半部进行des解密运算，然后再用左半部进行des加密运算，最后的结果就是MAC
+
+![图二]({{ site.url }}/assets/img/ANSI-X9.19.jpeg)
+
+#### 银联ECB
+银联ECB算法是国内银行普遍使用的MAC加密算法。先将MAC block每8个字节分组，然后每组依次和前面一组的结果异或，最后将8字节的异或结果转换成16字节的HEXDECIMAL。
+例如：
+以16进制表示的4个字节，E351BCA2，转换为HEXDECIMAL变成，4533353142434132。（字母部分统一按大写字母ASCII编码处理）
+将16字节的HEXDECIMAL结果进行DES的CBC模式加密，取加密结果最后8个字节作为MAC。
+
+![图三]({{ site.url }}/assets/img/unionpay-ECB.jpeg)
