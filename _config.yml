@@ -1,7 +1,7 @@
 # Site settings
 description: A blog about program
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://CharlesFan913.github.io" # the base hostname & protocol for your site 
+url: "https://blog.fanxy.me" # the base hostname & protocol for your site 
 timezone: Asia/Shanghai
 encoding: utf-8
 # Outputting
@@ -13,9 +13,8 @@ username: Fanxy
 user_description: Fanxy at Shanghai
 user_title: Developer
 email: LuciferFan913@gmail.com
-t#witter_username: lorem_ipsum
-github_username:  CharlesFan913
-#gplus_username:  lorem_ipsum
+t#witter_username: null
+github_username:  CFanxy
 disqus_username: cfanxy
 
 # Build settings
